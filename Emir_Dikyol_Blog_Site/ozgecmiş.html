@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öz Geçmiş</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+      .mySlides {display:none;}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li>
+            <a href="index.html">ANASAYFA</a>
+          </li>
+          <li>
+            <a href="hakkımda.html">Hakkımda</a>
+          </li>
+          <li>
+            <a href="ozgecmiş.html">ÖZGEÇMİŞ</a>
+          </li>
+          <li>
+            <a href="iletişim.html">İLETİŞİM</a>
+          </li>
+        </ul>
+      </nav>
+   <hr>
+
+   <section>
+    <h2 class="w3-center">Sertifikalarım</h2>
+
+    <div class="w3-content w3-display-container">
+      <img class="mySlides" src="images/foto1.PNG" style="width:100%">
+      <img class="mySlides" src="images/foto2.PNG" style="width:100%">
+      <img class="mySlides" src="images/foto3.PNG" style="width:100%">
+      <img class="mySlides" src="images/foto4.PNG" style="width:100%">
+      <img class="mySlides" src="images/foto5.PNG" style="width:100%">
+      <img class="mySlides" src="images/foto6.PNG" style="width:100%">
+      <img class="mySlides" src="images/foto7.PNG" style="width:100%">
+    
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <br>
+    
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+   </section>
+</body>
+</html>
